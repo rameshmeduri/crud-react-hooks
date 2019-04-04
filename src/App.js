@@ -26,7 +26,7 @@ const App = () => {
     setUsers(users.map((user) => (user.id === id ? updatedUser : user))); // update matching id
   };
 
-  const editRow = (user) => {
+  const editUser = (user) => {
     setEditing(true);
     setCurrentUser({ id: user.id, name: user.name, username: user.username }); // set current user
   };
@@ -59,7 +59,7 @@ const App = () => {
         </div>
         <div className="flex-large">
           <h2>View users</h2>
-          <UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
+          <UserTable users={users} editUser={editUser} deleteUser={deleteUser} />
         </div>
       </div>
     </div>
